@@ -19,3 +19,9 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#don't want to obfuscates code for network module
+# {} in this block can be dclared function won't be obfuscated
+-keep class com.sanjay.progaurdexample.network.* { *;}
+
+

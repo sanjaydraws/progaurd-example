@@ -1,0 +1,36 @@
+all option applied in release block only be applied on release build ,not applied on debug build
+
+if apply minifyEnabled true ,then it will optimize your code ,remove unused try-catch,if-else,classses ,library ,functions
+    minifyEnabled true
+
+shrinkResources true  --> will remove unused resources
+
+
+buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+}
+
+
+
+=============================
+progaurd-rules.pro
+example -> declread class that we don't want to optimize
+
+
+
+
+==============================
+@keep anotation tells progaurd , don't want to obfuscates code
+
+
+=============================
+progaurd-rules.pro
+
+// for more classes to apply rules for particular package
+#don't want to obfuscates code for network module
+# {} in this block can be dclared function won't be obfuscated
+-keep class com.sanjay.progaurdexample.network.* { *;}
+
