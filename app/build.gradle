@@ -17,11 +17,26 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    buildFeatures{
+        dataBinding true
+    }
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions"default"
+    productFlavors{
+        free{
+            applicationId "com.sanjay.progaurdexample.free"
+            buildConfigField("String", "BASE_URL", "\"http://www.freeapp.com\"")
+        }
+        paid{
+            applicationId "com.sanjay.progaurdexample.paid"
+            buildConfigField("String", "BASE_URL", "\"http://www.paidapp.com\"")
         }
     }
     compileOptions {

@@ -34,3 +34,21 @@ progaurd-rules.pro
 # {} in this block can be dclared function won't be obfuscated
 -keep class com.sanjay.progaurdexample.network.* { *;}
 
+
+
+
+
+==========================================================================
+product flavors
+powerful feature available in the android gradle plugin that allow us to manage different flavors of an application
+
+
+free -> 2/5 feature
+paid -> 5/5 feature
+
+
+can be add different packages for different flavors, by doing this both app can be uploaded on google play store
+because google play doesn't allow the app with same package name
+
+
+
