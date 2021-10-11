@@ -52,3 +52,16 @@ because google play doesn't allow the app with same package name
 
 
 
+=========================================================
+BuildTypes
+
+
+
+
+
+=================================================
+compile sdkVersion -> whatever version number u set means us can use android api features
+included in that version of the api
+(as well ass all previous version)
+
+

@@ -26,6 +26,7 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+
     }
 
     flavorDimensions"default"
@@ -35,6 +36,7 @@ android {
             buildConfigField("String", "BASE_URL", "\"http://www.freeapp.com\"")
         }
         paid{
+            //can be add different packages for different flavors, by doing this both app can be uploaded on google play store
             applicationId "com.sanjay.progaurdexample.paid"
             buildConfigField("String", "BASE_URL", "\"http://www.paidapp.com\"")
         }
